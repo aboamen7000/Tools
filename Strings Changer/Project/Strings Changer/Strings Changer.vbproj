@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Strings_Changer</RootNamespace>
+    <TargetFramework>net7.0</TargetFramework>
+    <ApplicationIcon>0.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="0.ico" />
+  </ItemGroup>
+
+</Project>
