@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Strings Founder/1.0.0": {
+        "runtime": {
+          "Strings Founder.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Strings Founder/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
