@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hezoo\\OneDrive\\Desktop\\Strings Founder\\Strings Founder\\Strings Founder.vbproj": {}
+    "C:\\Users\\hezoo\\OneDrive\\Desktop\\Courses\\Tools\\Strings Founder\\Strings Founder\\Strings Founder.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\hezoo\\OneDrive\\Desktop\\Strings Founder\\Strings Founder\\Strings Founder.vbproj": {
+    "C:\\Users\\hezoo\\OneDrive\\Desktop\\Courses\\Tools\\Strings Founder\\Strings Founder\\Strings Founder.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Strings Founder\\Strings Founder\\Strings Founder.vbproj",
+        "projectUniqueName": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Courses\\Tools\\Strings Founder\\Strings Founder\\Strings Founder.vbproj",
         "projectName": "Strings Founder",
-        "projectPath": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Strings Founder\\Strings Founder\\Strings Founder.vbproj",
+        "projectPath": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Courses\\Tools\\Strings Founder\\Strings Founder\\Strings Founder.vbproj",
         "packagesPath": "C:\\Users\\hezoo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Strings Founder\\Strings Founder\\obj\\",
+        "outputPath": "C:\\Users\\hezoo\\OneDrive\\Desktop\\Courses\\Tools\\Strings Founder\\Strings Founder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

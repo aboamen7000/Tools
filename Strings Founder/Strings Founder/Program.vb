@@ -1,62 +1,75 @@
+Imports System
 Imports System.IO
 
-Module Module1
+Module Program
     Sub Main()
-        ' Set console foreground color to green
-        Console.ForegroundColor = ConsoleColor.Green
+        Dim continueSearching As Boolean = True
 
-        Dim fileCounter As Integer = 0
+        While continueSearching
+            Console.Clear()
+            Dim directoryPath As String = String.Empty
 
-        Do
-            Console.WriteLine("Enter the directory path : ")
-            Dim directoryPath As String = Console.ReadLine()
+            Do While String.IsNullOrEmpty(directoryPath)
+                Console.WriteLine("Enter the directory path:")
+                directoryPath = Console.ReadLine().Trim()
+            Loop
 
-            Console.WriteLine("Enter the string to search for : ")
-            Dim searchTerm As String = Console.ReadLine()
+            Dim searchString As String = String.Empty
 
-            Dim searchTermFound As Boolean = False
+            Do While String.IsNullOrEmpty(searchString)
+                Console.WriteLine("Enter the string to search:")
+                searchString = Console.ReadLine().Trim()
+            Loop
 
-            Try
-                Dim files As String() = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories)
+            Dim files() As String = Directory.GetFiles(directoryPath, "*", SearchOption.AllDirectories)
 
-                For Each Single_file As String In files
-                    Try
-                        Dim fileText As String = File.ReadAllText(Single_file)
+            Dim found As Boolean = False
 
-                        If fileText.Contains(searchTerm) Then
-                            searchTermFound = True
+            For Each fileo As String In files
+                Dim fileContent As String = File.ReadAllText(fileo)
 
-                            Console.WriteLine($"The string '{searchTerm}' was found in the file: {Single_file}")
-                            Console.WriteLine("Do you want to continue searching for this string? (Y/N)")
+                If fileContent.Contains(searchString) Then
+                    found = True
+                    Console.ForegroundColor = ConsoleColor.Green
+                    Console.WriteLine("String found in file: " & fileo)
+                    Console.ResetColor()
+                    Console.WriteLine("Press Enter to continue searching or any other key to search another string.")
 
-                            Dim searchChoice As String = Console.ReadLine()
+                    Dim choice As ConsoleKeyInfo = Console.ReadKey()
 
-                            If searchChoice.Equals("N", StringComparison.OrdinalIgnoreCase) Then
-                                Exit For ' Exit the loop and move on to the next search
-                            End If
+                    If choice.Key <> ConsoleKey.Enter Then
+                        Console.ForegroundColor = ConsoleColor.Red
+                        Console.WriteLine("Do you want to continue searching with the same string in this directory? (Y/N)")
+                        Console.ResetColor()
+                        Dim continueSearchChoice As String = Console.ReadLine()
+
+                        If continueSearchChoice.Equals("N", StringComparison.OrdinalIgnoreCase) Then
+                            Exit For ' Stop searching in this directory
                         End If
-                    Catch ex As Exception
-                        Console.WriteLine($"Error processing file: {Single_file}")
-                        Console.WriteLine(ex.Message)
-                    End Try
-                Next
-
-                If Not searchTermFound Then
-                    Console.WriteLine($"The string '{searchTerm}' was not found in any file.")
+                    End If
                 End If
-            Catch ex As Exception
-                Console.WriteLine("Error accessing the directory.")
-                Console.WriteLine(ex.Message)
-            End Try
+            Next
 
-            Console.WriteLine("Do you want to perform another search? (Y/N)")
-            Dim repeat As String = Console.ReadLine()
+            If Not found Then
+                Console.ForegroundColor = ConsoleColor.Red
+                Console.WriteLine("String not found in any file.")
+                Console.ResetColor()
+                Console.ForegroundColor = ConsoleColor.Green
+                Console.WriteLine("Do you want to search another string? (Y/N)")
+                Console.ResetColor()
+                Dim searchAgainChoice As String = Console.ReadLine()
 
-            If Not repeat.Equals("Y", StringComparison.OrdinalIgnoreCase) Then
-                Exit Do
+                If searchAgainChoice.Equals("N", StringComparison.OrdinalIgnoreCase) Then
+                    Console.WriteLine("Press Q to restart or any other key to exit.")
+                    Dim restartChoice As ConsoleKeyInfo = Console.ReadKey()
+
+                    If restartChoice.Key = ConsoleKey.Q Then
+                        continueSearching = False ' Restart the whole process
+                    Else
+                        Exit While ' Exit the program
+                    End If
+                End If
             End If
-        Loop While True
-
-        Console.ReadLine()
+        End While
     End Sub
 End Module
