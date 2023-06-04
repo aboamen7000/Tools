@@ -1,0 +1,15 @@
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\bin\x64\Release\net7.0\Analizer.exe
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\bin\x64\Release\net7.0\Analizer.deps.json
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\bin\x64\Release\net7.0\Analizer.runtimeconfig.json
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\bin\x64\Release\net7.0\Analizer.dll
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\bin\x64\Release\net7.0\Analizer.pdb
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.vbproj.AssemblyReference.cache
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.AssemblyInfoInputs.cache
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.AssemblyInfo.vb
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.vbproj.CoreCompileInputs.cache
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.dll
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\refint\Analizer.dll
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.pdb
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\Analizer.genruntimeconfig.cache
+C:\Users\hezoo\OneDrive\Desktop\Analizer\Analizer\obj\x64\Release\net7.0\ref\Analizer.dll
