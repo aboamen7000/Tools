@@ -10,7 +10,6 @@ openai.api_key = os.getenv("ai_token")
 
 keep_alive()
 
-
 @dp.message_handler(commands=['start', 'help'])
 async def welcome(message: types.Message):
   await message.reply('Hello! Im GPT chat bot. Ask me something')
