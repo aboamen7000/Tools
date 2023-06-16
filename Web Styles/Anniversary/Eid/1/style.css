@@ -1,0 +1,291 @@
+*,
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.container {
+  overflow: hidden;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: -moz-linear-gradient(
+    180deg,
+    rgba(56, 3, 135, 1) 0%,
+    rgba(115, 76, 212, 1) 73%,
+    rgba(66, 43, 134, 1) 94%
+  );
+  background: -webkit-linear-gradient(
+    180deg,
+    rgba(56, 3, 135, 1) 0%,
+    rgba(115, 76, 212, 1) 73%,
+    rgba(66, 43, 134, 1) 94%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(56, 3, 135, 1) 0%,
+    rgba(115, 76, 212, 1) 73%,
+    rgba(66, 43, 134, 1) 94%
+  );
+}
+
+.fa-cloud {
+  font-size: 5rem;
+  position: absolute;
+  right: 0%;
+  color: #d0cccc;
+  opacity: 0.9555;
+}
+
+.c1 .fa-cloud {
+  z-index: 3;
+  top: 10%;
+  transform: translate(100%, -10%);
+  animation: clouds 25s ease-in-out infinite 0s;
+}
+
+.c2 .fa-cloud {
+  top: 20%;
+  transform: translate(100%, -20%);
+  animation: clouds 25s ease-in-out infinite 12s;
+}
+
+.c3 .fa-cloud {
+  z-index: 1;
+  top: 30%;
+  transform: translate(100%, -30%);
+  animation: clouds 25s ease-in-out infinite 8s;
+}
+
+@keyframes clouds {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 130%;
+  }
+}
+
+.moon .fa-star-and-crescent {
+  background: -webkit-linear-gradient(
+    100deg,
+    rgba(244, 242, 206, 1) 73%,
+    rgba(251, 251, 237, 1) 94%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 8rem;
+  position: absolute;
+  top: 10%;
+  right: 20%;
+  transform: rotatey(180deg);
+  z-index: 2;
+}
+
+.fa-star {
+  color: #a3b9bd;
+  position: absolute;
+  animation: star_blink 2s ease infinite alternate;
+}
+
+.s1,
+.s4,
+.s7 {
+  font-size: 0.9rem;
+}
+
+.s2,
+.s6 {
+  font-size: 0.8rem;
+}
+
+.s8,
+.s10 {
+  font-size: 1rem;
+}
+
+.s1 .fa-star {
+  top: 5%;
+  left: 2%;
+  animation-delay: 0.2s;
+}
+
+.s2 .fa-star {
+  top: 16%;
+  left: 10%;
+  animation-delay: 0.4s;
+}
+
+.s3 .fa-star {
+  top: 25%;
+  left: 30%;
+  animation-delay: 0.6s;
+}
+
+.s4 .fa-star {
+  top: 7%;
+  left: 40%;
+  animation-delay: 0.4s;
+}
+
+.s5 .fa-star {
+  top: 37%;
+  left: 50%;
+  animation-delay: 0.2s;
+}
+
+.s6 .fa-star {
+  top: 20%;
+  left: 90%;
+  animation-delay: 0.1s;
+}
+
+.s7 .fa-star {
+  top: 4%;
+  left: 70%;
+  animation-delay: 0.3s;
+}
+
+.s8 .fa-star {
+  top: 45%;
+  left: 7%;
+}
+
+.s9 .fa-star {
+  top: 30%;
+  left: 15%;
+}
+
+.s10 .fa-star {
+  top: 40%;
+  left: 80%;
+}
+
+.s11 .fa-star {
+  font-size: 0.5rem;
+  top: 10%;
+  left: 20%;
+  animation-delay: 1s;
+}
+
+.s12 .fa-star {
+  font-size: 0.6rem;
+  top: 46%;
+  left: 40%;
+}
+
+@keyframes star_blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fa-mosque {
+  font-size: 23rem;
+  margin-top: 1rem;
+  position: absolute;
+  opacity: 0.2;
+  right: -15%;
+  transform: rotatey(180deg);
+}
+
+.eid,
+.mubarak {
+  display: flex;
+  flex-direction: row;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  margin-top: 2rem;
+  color: white;
+  font-size: 2em;
+  position: absolute;
+  text-align: center;
+  width: 90%;
+  margin-left: 5%;
+}
+h1 span {
+  display: inline-block;
+  animation: eid 2s linear infinite alternate 2s;
+  opacity: 0;
+}
+@keyframes eid {
+  0% {
+    transform: scale(0.5);
+    filter: blur(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0.8);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+h1 span:nth-child(1) {
+  animation-delay: 0.25s;
+}
+h1 span:nth-child(2) {
+  animation-delay: 0.5s;
+}
+h1 span:nth-child(3) {
+  animation-delay: 0.75s;
+}
+h1 span:nth-child(4) {
+  animation-delay: 1s;
+}
+h1 span:nth-child(5) {
+  animation-delay: 1.25s;
+}
+h1 span:nth-child(6) {
+  animation-delay: 1.5s;
+}
+h1 span:nth-child(7) {
+  animation-delay: 1.75s;
+}
+h1 span:nth-child(8) {
+  animation-delay: 2s;
+}
+h1 span:nth-child(9) {
+  animation-delay: 2.25s;
+}
+h1 span:nth-child(10) {
+  animation-delay: 2.5s;
+}
+h1 span:nth-child(11) {
+  animation-delay: 3s;
+}
+h1 span:nth-child(12) {
+  animation-delay: 3.5s;
+}
+h1 span:nth-child(13) {
+  animation-delay: 3.75s;
+}
+h1 span:nth-child(14) {
+  animation-delay: 4s;
+}

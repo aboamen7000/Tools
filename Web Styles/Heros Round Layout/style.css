@@ -1,0 +1,357 @@
+@import url("https://fonts.googleapis.com/css2?family=Ovo&display=swap");
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 6.25vmax;
+}
+@media (max-width: 992px) {
+  html {
+    font-size: 10.0806451613vmax;
+  }
+}
+body {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: repeating-linear-gradient(-45deg, #111 20%, #4b6b71 40%, #111 60%);
+  font-size: 0.18rem;
+  font-family: "Ovo", serif;
+}
+#app {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+  align-items: center;
+  overflow: auto;
+  padding: 0.6rem;
+}
+@media (max-width: 992px) {
+  #app {
+    grid-template-columns: 100%;
+    row-gap: 1rem;
+  }
+}
+.hero-bg {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 85%;
+  height: 100%;
+  background: no-repeat top center/cover;
+  -webkit-mask: linear-gradient(to right, transparent, #000 50%);
+          mask: linear-gradient(to right, transparent, #000 50%);
+  -webkit-animation: fadeInFromRight 0.8s both;
+          animation: fadeInFromRight 0.8s both;
+}
+.hero-title {
+  position: absolute;
+  left: 0.3rem;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+ color: rgba(255, 255, 255, 0.2);
+  mix-blend-mode: overlay;
+  -webkit-animation: blurFadeIn 0.6s both;
+          animation: blurFadeIn 0.6s both;
+}
+@media (max-width: 992px) {
+  .hero-title {
+    top: 2rem;
+    bottom: auto;
+  }
+}
+.round {
+  position: relative;
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+}
+.round:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 4rem;
+  height: 4rem;
+  margin: auto;
+  border-radius: 50%;
+  border-top: 5px solid #c18f2b;
+ -webkit-animation: rotate 5s 0.2s both linear infinite;
+          animation: rotate 5s 0.2s both linear infinite;
+}
+.round .item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  -webkit-animation: roundItemFadeIn 0.8s 0.2s both;
+          animation: roundItemFadeIn 0.8s 0.2s both;
+}
+.round .item.active .inner {
+
+  box-shadow: 0.05rem 0.05rem 0.2rem rgba(0, 0, 0, 0.5);
+
+  transform: translate(-50%, -50%) scale(1.2);
+}
+.round .item.active .inner:after {
+  width: 20%;
+  height: 20%;
+  opacity: 1;
+}
+
+.round .inner {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  box-shadow: 0.05rem 0.05rem 0.1rem rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  transition: all 0.3s;
+
+}
+
+.round .inner:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+
+  right: 0;
+  width: 110%;
+  height: 110%;
+  border-radius: inherit;
+  background-color: #c18f2b;
+  opacity: 0.25;
+  transition: all 0.3s;
+}
+
+.round img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.hero-info {
+  width: 4rem;
+ padding: 0.2rem;
+ flex-shrink: 0;
+  border-radius: 0.2rem;
+  -webkit-backdrop-filter: blur(8px);
+         backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 0.1rem rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 2px #555;
+
+}
+
+@media (max-width: 992px) {
+  .hero-info {
+   width: 100%;
+
+  }
+}
+
+.hero-info .row {
+  margin-bottom: 0.1rem;
+  -webkit-animation: fadeInFromTop 0.5s both;
+         animation: fadeInFromTop 0.5s both;
+
+}
+
+.hero-info .row:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+
+}
+
+.hero-info .row:nth-of-type(2) {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+
+}
+
+.hero-info .row:nth-of-type(3) {
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+
+}
+
+.hero-info .row:nth-of-type(4) {
+  -webkit-animation-delay: 0.75s;
+         animation-delay: 0.75s;
+
+}
+
+.hero-info .title {
+  font-size: 1.1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #09c3e2;
+
+}
+
+.hero-info .title:before {
+  content: "# ";
+
+}
+
+.hero-info .content {
+  color: #ccc;
+  text-transform: capitalize;
+
+}
+
+.hero-info .content.desc {
+  font-size: 0.8em;
+  line-height: 1.2;
+
+}
+
+.fullscreen-icon {
+  position: fixed;
+  top: 0.2rem;
+  left: 0.2rem;
+  width: 0.3rem;
+  height: 0.3rem;
+  opacity: 0.8;
+
+  background: linear-gradient(#fff, #fff) no-repeat center/50% 50%;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  .fullscreen-icon {
+    display: none;
+  }
+
+}
+
+.fullscreen-icon span {
+  position: absolute;
+  width: 30%;
+  height: 30%;
+  border: 0px solid #fff;
+  border-width: 0.03rem 0.03rem 0 0;
+}
+.fullscreen-icon span:nth-of-type(1) {
+  top: 0;
+  right: 0;
+}
+
+.fullscreen-icon span:nth-of-type(2) {
+  bottom: 0;
+  right: 0;
+  transform: rotate(90deg);
+
+}
+
+.fullscreen-icon span:nth-of-type(3) {
+  bottom: 0;
+ left: 0;
+  transform: rotate(180deg);
+}
+
+.fullscreen-icon span:nth-of-type(4) {
+
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+
+}
+@-webkit-keyframes roundItemFadeIn {
+  from {
+    opacity: 0;
+    transform: none;
+
+  }
+}
+
+@keyframes roundItemFadeIn {
+  from {
+    opacity: 0;
+    transform: none;
+
+  }
+
+}
+
+@-webkit-keyframes fadeInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.2rem);
+  }
+}
+
+@keyframes fadeInFromTop {
+
+  from {
+
+    opacity: 0;
+    transform: translateY(-0.2rem);
+  }
+}
+@-webkit-keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+}
+@keyframes fadeInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(0.5rem);
+  }
+}
+@-webkit-keyframes blurFadeIn {
+  from {
+    filter: blur(10px);
+
+    letter-spacing: -0.4rem;
+  }
+}
+@keyframes blurFadeIn {
+  from {
+    filter: blur(10px);
+    letter-spacing: -0.4rem;
+  }
+
+}
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+
+  }
+}
+@-webkit-keyframes rotate {
+  to 
+    transform: rotate(360deg);
+  }
+
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}

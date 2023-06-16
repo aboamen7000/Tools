@@ -1,0 +1,51 @@
+#pole{
+			margin-top: 20px;
+			margin-left: -200px;
+			height: 700px;
+		}
+		#flag{
+			border-radius: 5px;
+			width: 161px;
+			height: 100px;
+			position: absolute;
+			left: 150px;
+			top: 500px;
+			-webkit-animation: mymove 5s infinite; 
+		}
+
+		@-webkit-keyframes mymove {
+			0%   {top: 500px;}
+			100% {top: 90px;}
+		}
+
+ #caption{
+ 	position: absolute;
+ 	top: 153px;
+ 	left: 299px;
+ 	height: 104px;
+ 	font-family: Garamond, serif;
+	line-height: 1em;
+	color: #9ACE15;
+	font-weight: bold;
+	font-size: 104px;
+	text-shadow: 0px 0px 0 rgb(46,91,170),1px 1px 0 rgb(31,76,155),2px 2px 0 rgb(17,62,141),3px 3px 0 rgb(2,47,126),4px 4px 0 rgb(-12,33,112),5px 5px 0 rgb(-27,18,97), 6px 6px 0 rgb(-41,4,83),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+	border-bottom-width: 20px;
+	text-align: center;
+     -webkit-animation: 3s multicolor infinite;
+}
+@-webkit-keyframes multicolor{
+0%{
+color:#ff9933;
+}
+33%{
+
+color:#ffffff;
+}
+66%{
+
+color:#138808;
+}
+100%{
+color:#ff9933;
+}	
+}

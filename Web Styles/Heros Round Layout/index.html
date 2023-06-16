@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Heroes Round Layout </title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - LOL heroes round layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="hero-bg" 
+       :style="{ backgroundImage: `url(${activeInfo.img})` }" 
+       :key="activeIndex"></div>
+  <div class="hero-title"  :key="activeIndex">{{ activeInfo.name }}</div>
+  
+  <div class="round">
+    <div class="item" 
+         :class="{ active: activeIndex === key }"
+         @click="activeIndex = key"
+         v-for="(el, key) in list"
+         :key="key"
+         :style="{ transform: itemPosition[key] }"
+         >
+      <div class="inner">
+        <img :src="el.thumbImg" alt="">
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-info" v-if="activeInfo" :key="activeIndex">
+    <div class="row">
+      <div class="title">name</div>
+      <div class="content">{{ activeInfo.name }}</div>
+    </div>
+    <div class="row">
+      <div class="title">role</div>
+      <div class="content">{{ activeInfo.role }}</div>
+    </div>
+    <div class="row">
+      <div class="title">difficulty</div>
+      <div class="content">{{ activeInfo.difficulty }}</div>
+    </div>
+    </div>
+  </div>
+  
+  <div class="fullscreen-icon" @click="toggleFullScreen">
+    <span v-for="item in 4" :key="key"></span>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/vue@3.2.22/dist/vue.global.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
